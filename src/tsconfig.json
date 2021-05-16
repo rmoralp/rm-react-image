@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "removeComments": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "../lib",
+  }
+}
