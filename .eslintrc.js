@@ -7,16 +7,15 @@ const RULES = {
 }
 
 module.exports = {
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
   ],
-  plugins: ['prettier'],
-  "rules": {
+  rules: {
     'accessor-pairs': RULES.OFF,
     '@babel/no-unused-expressions': RULES.OFF,
     'no-console': RULES.WARNING,
@@ -35,6 +34,6 @@ module.exports = {
     ],
     'no-var': RULES.WARNING,
     strict: RULES.OFF,
-    "prettier/prettier": [RULES.ERROR, prettierOptions]
+    'prettier/prettier': [RULES.ERROR, prettierOptions]
   }
 }

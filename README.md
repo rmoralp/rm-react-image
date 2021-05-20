@@ -7,7 +7,10 @@
 
 ## Incoming features
 
-- [ ] Lazy load (threshold)
+- [X] Lazy load (threshold)
+IF UA + BOT -> render image no lazy load
+IF UA + user -> ssr no render image, lazy load
+IF NOT UA render image -> attr loading
 - [ ] Load callbacks (error, isLoading, loaded)
 - [ ] Placeholder && PlaceholderSrc
 - [ ] Effects (blur, tc.)

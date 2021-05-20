@@ -16,6 +16,9 @@
     "noEmit": true,
     "jsx": "react",
     "outDir": "../dist",
+    "paths": {
+      "@rm/react-image": ["./src"]
+    }
   },
   "include": ["./demo", "./src"]
 }
