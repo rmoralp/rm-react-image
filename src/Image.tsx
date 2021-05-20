@@ -18,7 +18,7 @@ const imgStyle = {
   maxWidth: '100%'
 }
 
-const Image: FC.FC<ImageProps> = ({
+const Image: React.FC<ImageProps> = ({
   alt,
   className,
   height,

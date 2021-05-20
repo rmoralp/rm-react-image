@@ -1,10 +1,15 @@
 import {useOnScreen} from './index'
 
-type UseNearScreen = ({initialValue: boolean, offset: string}) => array
+interface UseNearScreenProps {
+  initialValue?: boolean
+  offset?: string
+}
+
+type UseNearScreen = (props: UseNearScreenProps) => [boolean, any]
 
 export const useNearScreen: UseNearScreen = ({
   initialValue = false,
   offset = '200px'
-} = {}) => {
+}) => {
   return useOnScreen({once: true, offset, initialValue})
 }

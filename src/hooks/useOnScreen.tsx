@@ -1,19 +1,21 @@
 import {useEffect, useRef, useState} from 'react'
 import {isIntersectionObserverEnabled} from '../utils'
 
-type UseOnScreenFn = ({
-  initialValue: boolean,
-  offset: string,
-  once: boolean,
-  ref: element
-}) => array
+interface UseOnScreenProps {
+  initialValue?: boolean
+  offset?: string
+  once?: boolean
+  ref?: element
+}
+
+type UseOnScreenFn = (props: UseOnScreenProps) => [boolean, any]
 
 export const useOnScreen: UseOnScreenFn = ({
   initialValue = false,
   offset = '0px',
   once = true,
   ref
-} = {}) => {
+}) => {
   // State and setter for storing whether element is visible or not
   const [isIntersecting, setIntersecting] = useState(initialValue)
   const outerRef = useRef()
@@ -24,7 +26,7 @@ export const useOnScreen: UseOnScreenFn = ({
 
     if (!current) return
 
-    let observer
+    let observer: IntersectionObserver
     ;(isIntersectionObserverEnabled
       ? Promise.resolve()
       : import('intersection-observer')
