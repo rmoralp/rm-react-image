@@ -1,8 +1,11 @@
 .eslintrc.js
 .nvmrc
 .prettierrc.js
+babel.config.json
+index.html
+package-lock.json
+vite.config.ts
 demo
 dist
+node_modules
 src
-tsconfig.json
-vite.config.ts

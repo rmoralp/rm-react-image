@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build:demo": "vite build --outDir ../dist",
+    "build:demo": "vite build --outDir ./dist",
     "build:package": "babel src --out-dir lib",
     "lint": "eslint --ext js,jsx .",
     "prepare": "npm run build:package",

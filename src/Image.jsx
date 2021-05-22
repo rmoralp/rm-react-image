@@ -83,21 +83,21 @@ const Image = ({
 
 Image.propTypes = {
   alt: PropTypes.string,
-  className: PropTypes.string,
-  decoding: PropTypes.string,
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  loading: PropTypes.string,
-  onLoad: PropTypes.func,
-  onError: PropTypes.func,
   base64Placeholders: PropTypes.shape({
     error: PropTypes.string,
     loading: PropTypes.string
   }),
+  className: PropTypes.string,
+  decoding: PropTypes.string,
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  loading: PropTypes.string,
+  onError: PropTypes.func,
+  onLoad: PropTypes.func,
   sizes: PropTypes.string,
   src: PropTypes.string,
   srcSet: PropTypes.string,
   style: PropTypes.object,
   userAgent: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 export default Image
