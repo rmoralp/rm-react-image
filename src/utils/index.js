@@ -1,4 +1,5 @@
 export {isBotService} from './isBotService'
+export {isNumericSize, getSize} from './sizes.js'
 
 export const isOnBrowser = typeof window !== 'undefined'
 

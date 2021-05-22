@@ -1,11 +1,7 @@
-import React from 'react'
 import {useNearScreen} from './hooks'
+import {getSize} from './utils'
 
-type ImageProps = {
-  children: React.ReactChild
-}
-
-export const LazyImage: React.FC<ImageProps> = ({
+export const LazyImage = ({
   children,
   rootMargin = '100px 0px 0px',
   placeholder,
@@ -19,7 +15,7 @@ export const LazyImage: React.FC<ImageProps> = ({
     return <div ref={fromRef}>{placeholder}</div>
   } else {
     const emptyContentStyle = {
-      height: `${height ?? '0'}px`,
+      height: height ? getSize(height) : '0px',
       marginBottom: '1px'
     }
     return <div ref={fromRef} style={emptyContentStyle} />

@@ -9,8 +9,8 @@ const BOTS_USER_AGENTS = [
   'googlebot-video'
 ]
 
-type IsBotServiceFn = (userAgent: string | undefined) => boolean
-
-export const isBotService: IsBotServiceFn = userAgent => {
-  return BOTS_USER_AGENTS.some(ua => userAgent.toLowerCase().includes(ua))
+export const isBotService = userAgent => {
+  return userAgent
+    ? BOTS_USER_AGENTS.some(ua => userAgent.toLowerCase().includes(ua))
+    : false
 }

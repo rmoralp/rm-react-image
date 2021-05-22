@@ -7,20 +7,17 @@ export default defineConfig({
     include: ['react-dom']
   },
   plugins: [reactRefresh()],
+  esbuild: {
+    jsxInject: `import React from 'react'`
+  },
+  build: {
+    rollupOptions: {
+      external: ['react', 'react-dom']
+    }
+  },
   resolve: {
     alias: {
       '@rm/react-image': path.resolve(__dirname, './src')
     }
   }
-  // resolve: {
-  //   alias: [
-  //     {
-  //       find: '@rm/react-image',
-  //       replacement: () => {
-  //         console.log(path.resolve(__dirname, './src'))
-  //         return path.resolve(__dirname, './src')
-  //       }
-  //     }
-  //   ]
-  // }
 })
