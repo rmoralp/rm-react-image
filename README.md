@@ -29,7 +29,7 @@ $ npm i --save @rm/react-image
 
 ```javascript
 import React from 'react';
-import { Image } from '@rm/react-image';
+import { Image } from 'rm-react-image';
 
 const deviceUserAgent = 'googlebot'
 
