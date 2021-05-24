@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import React from 'react'
 import {Example} from './components/Example'
 import {Image} from '@rm/react-image'
 import './App.css'
@@ -10,6 +11,8 @@ const userAgents = {
 
 const images = [
   {
+    description:
+      'A default lazy loading image. This image do not lazy load because of it is in viewport',
     height: '600',
     loading: 'lazy',
     onLoad: () => console.log('#1 Lazy load image has been loaded'),
@@ -17,6 +20,8 @@ const images = [
     userAgent: userAgents.user
   },
   {
+    description:
+      'A default lazy loading image. This probably do not lazy because of it is partially in viewport',
     height: '600',
     loading: 'lazy',
     onLoad: () => console.log('#2 Lazy load image has been loaded'),
@@ -24,6 +29,7 @@ const images = [
     userAgent: userAgents.user
   },
   {
+    description: 'A default lazy loading image',
     height: '600',
     loading: 'lazy',
     onLoad: () => console.log('#3 Lazy load image has been loaded'),
@@ -31,6 +37,7 @@ const images = [
     userAgent: userAgents.user
   },
   {
+    description: 'A default lazy loading image',
     height: '600',
     loading: 'lazy',
     onLoad: () => console.log('#4 Lazy load image has been loaded'),
@@ -38,6 +45,7 @@ const images = [
     userAgent: userAgents.user
   },
   {
+    description: 'A default lazy loading image',
     height: '600',
     loading: 'lazy',
     onLoad: () => console.log('#5 Lazy load image has been loaded'),
@@ -85,6 +93,7 @@ const images = [
     userAgent: userAgents.bot
   },
   {
+    description: 'A default lazy loading image',
     height: '600',
     loading: 'lazy',
     onLoad: () => console.log('#10 Lazy load image has been loaded'),

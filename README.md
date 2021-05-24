@@ -11,7 +11,7 @@ The main objective is to achieve the best possible performance without penalizin
 - 🌇 Loading and error placeholders
 - 🔁 Server side support (SSR)
 - ☝ No dependencies, just one possible polyfill: intersection-observer polyfill
-🗜️ x KB gzipped (plus 1KB if you need intersection-observer)
+- 🗜️ x KB gzipped (plus 1KB if you need intersection-observer)
 
 Overview
 React Slidy is a simple and minimal slider component. The main objective is to achieve the best performance and smoothness on React apps, specially on mobile 📱.
@@ -19,10 +19,10 @@ React Slidy is a simple and minimal slider component. The main objective is to a
 ## Installation
 ```
 # Yarn
-$ yarn add @rm/react-image
+$ yarn add rm-react-image
 
 # NPM
-$ npm i --save @rm/react-image
+$ npm i --save rm-react-image
 ```
 
 ## `LazyLoadImage` usage

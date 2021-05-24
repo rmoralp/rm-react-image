@@ -1,3 +1,4 @@
+import React from 'react'
 import {useNearScreen} from './hooks'
 import {getSize} from './utils'
 

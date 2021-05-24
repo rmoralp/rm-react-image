@@ -71,7 +71,7 @@ module.exports = {
     'no-return-await': RULES.WARNING,
     'no-unused-expressions': RULES.OFF,
     'no-unused-vars': [
-      RULES.ERROR,
+      RULES.WARNING,
       {
         vars: 'local',
         args: 'none',

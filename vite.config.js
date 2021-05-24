@@ -7,9 +7,6 @@ export default defineConfig({
     include: ['react-dom']
   },
   plugins: [reactRefresh()],
-  esbuild: {
-    jsxInject: `import React from 'react'`
-  },
   build: {
     rollupOptions: {
       external: ['react', 'react-dom']
