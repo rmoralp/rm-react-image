@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [reactRefresh()],
   resolve: {
     alias: {
-      src: path.resolve(__dirname, './src')
+      src: path.resolve(__dirname, './src'),
+      react: path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      'prop-types': path.resolve(__dirname, './node_modules/prop-types')
     }
   }
 })
