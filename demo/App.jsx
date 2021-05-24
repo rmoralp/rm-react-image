@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react'
 import {Example} from './components/Example'
-import {Image} from '@rm/react-image'
+import {Image} from 'src'
 import './App.css'
 
 const userAgents = {
