@@ -1,5 +1,8 @@
 # rm React image ⚡
 
+[![npm version](https://badge.fury.io/js/rm-react-image.svg)](https://badge.fury.io/js/rm-react-image)
+[![npm](https://img.shields.io/npm/dm/rm-react-image.svg?maxAge=2592000)](https://www.npmjs.com/package/rm-react-image)
+
 🟢 Minimalistic, blazing fast and seo friendly component for React ⚛️
 
 The main objective is to achieve the best possible performance without penalizing SEO. Also, it use W3C img attributes.
@@ -12,7 +15,7 @@ The main objective is to achieve the best possible performance without penalizin
 - 🌇 Loading and error placeholders
 - 🔁 Server side support (SSR)
 - ☝ No dependencies, just one possible polyfill: intersection-observer polyfill
-- 🗜️ x KB gzipped (plus 1KB if you need intersection-observer)
+- 🗜️ 5KB gzipped (plus 1KB if you need intersection-observer)
 
 Overview
 React Slidy is a simple and minimal slider component. The main objective is to achieve the best performance and smoothness on React apps, specially on mobile 📱.
