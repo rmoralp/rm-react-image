@@ -1,0 +1,11 @@
+{
+  "name": "rm-react-image",
+  "version": 2,
+  "public": false,
+  "github": {
+    "enabled": false
+  },
+  "builds": [
+    { "src": "./dist/**", "use": "@now/static" }
+  ]
+}
