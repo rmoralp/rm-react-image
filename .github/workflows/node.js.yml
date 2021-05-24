@@ -28,4 +28,16 @@ jobs:
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm run build:demo
+      - run: npm install -g surge
+      - run: surge ./dist --domain rm-react-image.surge.sh --token ${{secrets.SURGE_TOKEN}}
