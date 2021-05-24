@@ -34,14 +34,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: amondnet/vercel-action@v19
-          with:
-            vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-            github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-            vercel-args: '--prod' #Optional
-            vercel-org-id: ${{ secrets.ORG_ID}}  #Required
-            vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
-            working-directory: ./sub-directory #Your Working Directory, Optional
-            alias-domains: | #Optional
-              staging.angular.vercel-action.amond.dev
-              pr-{{PR_NUMBER}}.angular.vercel-action.amond.dev
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
+          working-directory: ./sub-directory #Your Working Directory, Optional
+          alias-domains: | #Optional
+            staging.angular.vercel-action.amond.dev
+            pr-{{PR_NUMBER}}.angular.vercel-action.amond.dev
 
