@@ -1,10 +1,11 @@
-# rm / React Image ⚡
+# rm React image ⚡
 
-Minimalistic, blazing fast and seo friendly component for React ⚛️
+🟢 Minimalistic, blazing fast and seo friendly component for React ⚛️
 
 The main objective is to achieve the best possible performance without penalizing SEO. Also, it use W3C img attributes.
 
 ## Features
+
 - ⚡️ Optimized for performance
 - 📈 SEO friendly
 - 😪 Lazy load support
@@ -25,7 +26,7 @@ $ yarn add rm-react-image
 $ npm i --save rm-react-image
 ```
 
-## `LazyLoadImage` usage
+## Usage
 
 ```javascript
 import React from 'react';
