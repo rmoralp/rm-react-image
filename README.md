@@ -31,6 +31,8 @@ $ npm i --save rm-react-image
 
 ## Usage
 
+> Common usage with lazy loading for `loading="lazy"`
+
 ```javascript
 import React from 'react';
 import { Image } from 'rm-react-image';
@@ -40,7 +42,7 @@ const deviceUserAgent = 'googlebot'
 const MyImage = ({ alt, height, src, width }) => (
   <Image
     alt={alt}
-    src={src}
+    src={src} // also support srcset and sizes attributes
     width={width}
     height={height}
     loading="lazy"
@@ -49,6 +51,14 @@ const MyImage = ({ alt, height, src, width }) => (
 
 export default MyImage;
 ```
+
+Loading "lazy" attribute will act differently depends on User-Agent.
+
+- If Image detects that User-Agent is a bot, the image will be rendered on SSR and will use [native browser lazy loading](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)
+
+- If the image detects that User-Agent is a user, the image will render when it enters to the viewport.
+
+For that reason, it is important to pass userAgent prop on client and server-side.
 
 ### Props
 
@@ -68,6 +78,86 @@ export default MyImage;
 | style | `Object` | | Css style properties to inline them. |
 | userAgent | `String` | | Device user agent used for improve rendering strategy. |
 | width | `String` or `Number` | | Indicates the rendered width of the image in CSS pixels. |
+
+### How to
+
+> Use error placeholder
+
+```javascript
+import React from 'react';
+import { Image } from 'rm-react-image';
+
+const deviceUserAgent = 'googlebot'
+const imageProps = {
+  base64Placeholders: {
+    error: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+  },
+  onError: () => console.log('Image can not be found')
+}
+
+const MyImage = ({ alt, height, src, width }) => (
+  <Image
+    alt={alt}
+    src={src} // also support srcset and sizes attributes
+    width={width}
+    height={height}
+    loading="lazy"
+    userAgent={deviceUserAgent}
+    {...imageProps} />
+);
+
+export default MyImage;
+```
+
+> Use loading placeholder
+
+```javascript
+import React from 'react';
+import { Image } from 'rm-react-image';
+
+const deviceUserAgent = 'googlebot'
+const imageProps = {
+  base64Placeholders: {
+    loading: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+  },
+  onLoad: () => console.log('Image has been loaded'),
+}
+
+const MyImage = ({ alt, height, src, width }) => (
+  <Image
+    alt={alt}
+    src={src} // also support srcset and sizes attributes
+    width={width}
+    height={height}
+    loading="lazy"
+    userAgent={deviceUserAgent}
+    {...imageProps} />
+);
+
+export default MyImage;
+```
+
+> Not lazy load image for `loading="eager"`
+
+```javascript
+import React from 'react';
+import { Image } from 'rm-react-image';
+
+const deviceUserAgent = 'googlebot'
+
+const MyImage = ({ alt, height, src, width }) => (
+  <Image
+    alt={alt}
+    src={src} // also support srcset and sizes attributes
+    width={width}
+    height={height}
+    loading="eager"
+    userAgent={deviceUserAgent} />
+);
+
+export default MyImage;
+```
+
 ## Browser compatibility
 Supported browsers are:
 

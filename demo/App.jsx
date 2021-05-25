@@ -93,10 +93,18 @@ const images = [
     userAgent: userAgents.bot
   },
   {
+    description: 'Bot user agent. It is not lazy loaded',
+    height: '600',
+    loading: 'eager',
+    onLoad: () => console.log('#10 Not lazy loaded image has been loaded'),
+    src: 'https://source.unsplash.com/random/600x900/?girona',
+    userAgent: userAgents.user
+  },
+  {
     description: 'A default lazy loading image',
     height: '600',
     loading: 'lazy',
-    onLoad: () => console.log('#10 Lazy load image has been loaded'),
+    onLoad: () => console.log('#11 Lazy load image has been loaded'),
     src: 'https://source.unsplash.com/random/600x900/?berlin',
     userAgent: userAgents.user
   }
