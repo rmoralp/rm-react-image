@@ -75,7 +75,7 @@ For that reason, it is important to pass userAgent prop on client and server-sid
 | sizes | `String` | | This string specifies a list of comma-separated conditional sizes for the image; that is, for a given viewport size, a particular image size is to be used. Read the documentation on the sizes page for details on the format of this string. |
 | src | `String` |  | Contains the full URL of the image including base URI. |
 | srcSet | `String` | | This specifies a list of candidate images, separated by commas (`',', U+002C COMMA`). Each candidate image is a URL followed by a space, followed by a specially-formatted string indicating the size of the image. The size may be specified either the width or a size multiple. Read the srcset page for specifics on the format of the size substring. |
-| style | `Object` | | Css style properties to inline them. |
+| style | `Object` | | CSS style properties to inline them. |
 | userAgent | `String` | | Device user agent used for improve rendering strategy. |
 | width | `String` or `Number` | | Indicates the rendered width of the image in CSS pixels. |
 
