@@ -1,10 +1,11 @@
 # rm React image ⚡
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 
 [![npm version](https://badge.fury.io/js/rm-react-image.svg)](https://badge.fury.io/js/rm-react-image)
 [![npm](https://img.shields.io/npm/dm/rm-react-image.svg?maxAge=2592000)](https://www.npmjs.com/package/rm-react-image)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 🟢 Minimalistic, blazing fast and seo friendly component for React ⚛️
 
