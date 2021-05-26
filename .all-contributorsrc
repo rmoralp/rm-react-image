@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "nucliweb",
+      "name": "Joan León",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1307927?v=4",
+      "profile": "http://joanleon.dev",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "rm-react-image",
+  "projectOwner": "rmoralp",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
