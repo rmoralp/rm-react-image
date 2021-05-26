@@ -69,6 +69,7 @@ const Image = ({
       srcSet={srcSet}
       style={styles}
       width={width}
+      decoding={decoding}
       onLoad={onLoad}
       onError={handleError}
     />
