@@ -1,6 +1,6 @@
 {
   "name": "rm-react-image",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React image component Performance and SEO friendly",
   "main": "lib/index.js",
   "keywords": [
